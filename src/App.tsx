@@ -13,7 +13,7 @@ export default function Example() {
       <img
         alt=""
         src={imageAuth}
-        className="h-full"
+        className="h-[105vh]"
       />
       <div className="flex flex-col justify-between w-full">
         <div className="flex items-center justify-between px-10">
