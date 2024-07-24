@@ -92,8 +92,8 @@ const navigation = [
             />
             <h1 className="text-gray-500 zen-kaku-gothic-antique-regular">Need help?</h1>
           </div>
-          <div className="mt-8 md:order-1 md:mt-0">
-            <p className="text-center zen-kaku-gothic-antique-regular leading-5 text-gray-500">
+          <div className="mt-8  md:order-1 md:mt-0">
+            <p className="mb-4 text-center zen-kaku-gothic-antique-regular leading-5 text-gray-500">
             Copyright 2024 - JC International. All rights Reserved
             </p>
             <div className="flex justify-start space-x-5 md:order-2">

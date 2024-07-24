@@ -169,6 +169,10 @@ export default function Example() {
                       autoComplete="current-password"
                       className="block w-full py-5 zen-kaku-gothic-antique-regular pl-3 text-gray-900 placeholder:text-gray-400 border-0 sm:text-sm sm:leading-6"
                     />
+
+            <span className="px-3"> 
+                          <p className="zen-kaku-gothic-antique-regular text-[#757575]">Show</p>
+               </span>
                     
                   </div>
               </div>
