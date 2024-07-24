@@ -1,8 +1,9 @@
 import imageAuth from "../src/assets/left-section.png"
 import email from "../src/assets/icon-mail.png"
-import { ArrowLeft2,ArrowRight2} from "iconsax-react"
+import { ArrowLeft2,ArrowRight2,User,Lock} from "iconsax-react"
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import Footer from '../src/components/Footer'
 
 
 
@@ -32,20 +33,25 @@ export default function Example() {
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
           Welcome to JCInspect
           </h2>
-          <p className="mt-2 text-center text-xl font-normal leading-9 tracking-tight text-gray-900">SIGN IN TO  INSPECT</p>
+          <p className="mt-2 text-center text-xl font-normal leading-9 tracking-tight text-[#757575]">SIGN IN TO  INSPECT</p>
         </div>
 
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <div className="mt-10 mb-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form action="#" method="POST" className="space-y-6">
             <div>
               <div className="mt-2">
               <Menu as="div" className="relative inline-block text-left">
               <div>
-              <MenuButton style={{ width: '24rem' }} className="inline-flex justify-center gap-x-1.5 rounded-md bg-white py-5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-                Options
-                <ChevronDownIcon aria-hidden="true" className="-mr-1 h-5 w-5 text-gray-400" />
-              </MenuButton>
-            </div>
+                <MenuButton 
+                  style={{ width: '24rem' }} 
+                  className="inline-flex justify-center items-center gap-x-20 rounded-md bg-white py-5 text-sm font-semibold text-[#757575] shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                >
+                  <User size="20" className="text-gray-400" /> {/* User icon */}
+                  User Type
+                  <ChevronDownIcon aria-hidden="true" className="h-8 w-8 text-gray-400" />
+
+                </MenuButton>
+              </div>
 
 
 
@@ -146,11 +152,14 @@ export default function Example() {
             <div>
               <div className="mt-2">
               <div className="flex items-center w-full rounded-md border border-gray-300 focus-within:border-gray-500 ">
-              <img
-              alt=""
-              src={email}
-              className="px-3"
-            />
+                <span className="px-3"> 
+                <Lock
+                  size="22"
+                  color="#757575"
+                 
+                  />
+                </span>
+             
                     <input
                       id="password"
                       name="password"
@@ -183,7 +192,9 @@ export default function Example() {
             </a>
           </p>
         </div>
+        <Footer/>
       </div>
+      
       </div>
     </div>
   )
