@@ -25,7 +25,15 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import Logo from '../assets/dashlogo.png'
+import Logo from '../assets/dashlogo.png';
+import Cards from '../components/Cards'
+
+
+
+
+
+
+import {Message,Notification,Award} from 'iconsax-react'
 
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
@@ -172,7 +180,7 @@ export default function Example() {
         {/* Static sidebar for desktop */}
         <div className="hidden bg-[#080E2B] lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <div className="bg-[#080E2B] flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
+          <div className="bg-[#080E2B] flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 px-6 pb-4">
             <div className="flex h-16 shrink-0 items-center">
             <img
                 alt="JCINSPECT"
@@ -257,7 +265,7 @@ export default function Example() {
         </div>
 
         <div className="lg:pl-72 ">
-          <div className="bg-[#080E2B] sticky top-0 z-40 flex h-20 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
+          <div className="bg-[#080E2B] sticky top-0 z-40 flex h-20 shrink-0 items-center gap-x-4 border-b border-gray-200 px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
             <button type="button" onClick={() => setSidebarOpen(true)} className="-m-2.5 p-2.5 text-gray-700 lg:hidden">
               <span className="sr-only">Open sidebar</span>
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />
@@ -286,15 +294,27 @@ export default function Example() {
               <div className="flex items-center gap-x-4 lg:gap-x-6">
                 <button type="button" className="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
                   <span className="sr-only">View notifications</span>
-                  <BellIcon aria-hidden="true" className="h-6 w-6" />
+                  <Message
+                            size="22"
+                            color="#FFFFFF"
+                            variant="Bold"
+                            />
                 </button>
                 <button type="button" className="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
                   <span className="sr-only">View notifications</span>
-                  <BellIcon aria-hidden="true" className="h-6 w-6" />
+                                        <Notification
+                        size="22"
+                        color="#FFFFFF"
+                        variant="Bold"
+                        />
                 </button>
                 <button type="button" className="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
                   <span className="sr-only">View notifications</span>
-                  <BellIcon aria-hidden="true" className="h-6 w-6" />
+                  <Award
+                       size="22"
+                       color="#FFFFFF"
+                       variant="Bold"
+                       />
                 </button>
 
                 {/* Separator */}
@@ -307,15 +327,22 @@ export default function Example() {
                     <img
                       alt=""
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      className="h-8 w-8 rounded-full bg-gray-50"
+                      className="h-14 w-19 rounded-full bg-gray-50"
                     />
-                    <span className="hidden lg:flex lg:items-center">
-                      <span aria-hidden="true" className="ml-4 text-sm font-semibold leading-6 text-gray-900">
-                        Tom Cook
-                      </span>
-                      <ChevronDownIcon aria-hidden="true" className="ml-2 h-5 w-5 text-gray-400" />
-                    </span>
+                  <span className="hidden lg:flex lg:flex-col lg:items-center">
+                        <span aria-hidden="true" className="ml-4 text-sm font-semibold leading-6 text-white">
+                            Tom Cook
+                        </span>
+                        <button
+                            type="button"
+                            className="ml-2 rounded bg-white px-4 py-1.6 text-sm font-normal text-black shadow-sm hover:bg-indigo-100"
+                        >
+                            EDIT MY PROFILE
+                        </button>
+                        </span>
+
                   </MenuButton>
+                  
                   <MenuItems
                     transition
                     className="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
@@ -337,7 +364,70 @@ export default function Example() {
           </div>
 
           <main className="py-10">
-            <div className="px-4 sm:px-6 lg:px-8">{/* Your content */}</div>
+            <div className="px-4 sm:px-6 lg:px-8 flex justify-between">
+                <h1 className='text-3xl'>Dashboard</h1>
+
+                <div className="text-center">
+                    <h3 className="items-center"> Job search status</h3>
+                    <Menu as="div" className="relative inline-block text-left">
+      <div>
+        <MenuButton className="inline-flex w-full items-center justify-center gap-x-10 rounded-lg bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+        <svg viewBox="0 0 6 6" aria-hidden="true" className="h-1.5 w-1.5 fill-green-500">
+          <circle r={3} cx={3} cy={3} />
+        </svg>
+          Actively Jobs
+          <ChevronDownIcon aria-hidden="true" className="-mr-1 h-5 w-5 text-gray-400" />
+        </MenuButton>
+      </div>
+
+      <MenuItems
+        transition
+        className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+      >
+        <div className="py-1">
+          <MenuItem>
+            <a
+              href="#"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+            >
+              Account settings
+            </a>
+          </MenuItem>
+          <MenuItem>
+            <a
+              href="#"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+            >
+              Support
+            </a>
+          </MenuItem>
+          <MenuItem>
+            <a
+              href="#"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+            >
+              License
+            </a>
+          </MenuItem>
+          <form action="#" method="POST">
+            <MenuItem>
+              <button
+                type="submit"
+                className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+              >
+                Sign out
+              </button>
+            </MenuItem>
+          </form>
+        </div>
+      </MenuItems>
+                    </Menu>
+                </div>
+            </div>
+
+            <div>
+                <Cards/>
+            </div>
           </main>
         </div>
       </div>
