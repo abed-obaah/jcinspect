@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.zen-kaku-gothic-antique-medium {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .zen-kaku-gothic-antique-bold {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .zen-kaku-gothic-antique-black {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .zen-kaku-gothic-antique-regular {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .zen-kaku-gothic-antique-light {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
