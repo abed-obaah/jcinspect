@@ -4,7 +4,6 @@ import Rec1 from '../assets/Avalon-PNG 1.png'
 // import Rec2 from '../assets/Rectangle 296.png'
 import help from '../assets/help.png'
 import {
-
     Bookmark
   } from '@heroicons/react/24/outline'
 
@@ -17,7 +16,8 @@ const people = [
     imageUrl:Rec1,
     work:'lifting Equipment',
     time:'3 weeks ago',
-    status:"Rejected"
+    status:"Rejected",
+    jobs:'100 jobs'
   },
   {
     name: 'Noble Drilling',
@@ -27,7 +27,8 @@ const people = [
     imageUrl:Rec,
     work:'lifting Equipment',
     time:'1 week ago',
-    status:"in process"
+    status:"in process",
+    jobs:'12 jobs'
   },
 //   {
 //     name: 'Shelf  Drilling',
@@ -46,32 +47,37 @@ export default function Cards() {
     return (
       <div className="p-4">
       <div className="overflow-hidden container  rounded-lg bg-gray-100 shadow-lg">
-        <h1 className='text-2xl'>Old completed jobs</h1>
-        <div className="px-4 py-5 sm:p-6 flex justify-between">
-            <div className='flex justify-evenly space-x-4'>
-                <div className='flex items-center'>
-                        <div className="flex-none rounded-full bg-green-400/10 p-1 text-green-400">
-                            <div className="h-2 w-2 rounded-full bg-current" />
-                        </div>
-                            <h1>Lifting </h1>
-                </div>
-           
-                <div className='flex items-center'>
-                        <div className="flex-none rounded-full bg-green-400/10 p-1 text-green-400">
-                            <div className="h-2 w-2 rounded-full bg-current" />
-                        </div>
-                            <h1>PPS </h1>
-                </div>
-                <div className='flex items-center'>
-                        <div className="flex-none rounded-full bg-green-400/10 p-1 text-green-400">
-                            <div className="h-2 w-2 rounded-full bg-current" />
-                        </div>
-                            <h1>Nigeria </h1>
-                </div>
-            </div>
-          
-          <p>see all</p>
+      <div>
+  <h1 className="text-2xl -mb-10 px-6 py-5">Old completed jobs</h1>
+  <div className="px-4 py-5 sm:p-6 flex justify-between items-center">
+    <div className="flex justify-evenly space-x-4">
+      <div className="flex items-center">
+        <div className="flex-none rounded-full bg-green-400/10 p-1 text-green-400">
+          <div className="h-2 w-2 rounded-full bg-current" />
         </div>
+        <h1 className="ml-2 text-sm">Lifting</h1>
+      </div>
+
+      <div className="flex items-center">
+        <div className="flex-none rounded-full bg-green-400/10 p-1 text-green-400">
+          <div className="h-2 w-2 rounded-full bg-current" />
+        </div>
+        <h1 className="ml-2 text-sm">PPS</h1>
+      </div>
+
+      <div className="flex items-center">
+        <div className="flex-none rounded-full bg-green-400/10 p-1 text-green-400">
+          <div className="h-2 w-2 rounded-full bg-current" />
+        </div>
+        <h1 className="ml-2 text-sm">Nigeria</h1>
+      </div>
+    </div>
+
+    <p className="ml-2 text-sm text-blue-400">see all</p>
+  </div>
+</div>
+
+
         
         <div className="relative">
    
@@ -95,9 +101,9 @@ export default function Cards() {
                   <Bookmark aria-hidden="true" className="h-6 w-6 text-white" />
     </svg> */}
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="absolute top-0 right-0 mt-2 mr-2 h-6 w-6 text-gray-400 hover:text-gray-600 cursor-pointer z-10">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
-</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="absolute top-0 right-0 mt-2 mr-2 h-6 w-6 text-gray-400 hover:text-gray-600 cursor-pointer z-10">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                        </svg>
 
                     {/* Each grid item */}
                     <div className="flex-shrink-0">
@@ -107,8 +113,18 @@ export default function Cards() {
                         <a href="#" className="focus:outline-none block">
                             <span aria-hidden="true" className="absolute inset-0" />
                             <p className="text-sm font-medium text-gray-900">{person.name}</p>
-                            <p className="truncate text-sm text-gray-500">{person.role}</p>
                             <p className="truncate text-sm text-gray-500">{person.location}</p>
+                            <div className='flex'>
+                                    <p className="truncate text-sm text-gray-500">{person.time}</p>
+                                    <p className="truncate text-sm text-green-400 items-center flex ml-2">
+                                        <svg viewBox="0 0 6 6" aria-hidden="true" className="h-1.5 w-1.5 fill-green-400 mr-1.5">
+                                            <circle r={3} cx={3} cy={3} />
+                                            </svg>
+                                 {person.jobs}
+                                 </p>
+                            </div>
+                           
+                            
                         </a>
                     </div>
                     <div>

@@ -30,7 +30,8 @@ import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import Logo from '../assets/dashlogo.png';
 import Cards from '../components/Cards'
 import CompletedJobs from '../components/CompletedJobs'
-
+import Aside from '../components/Aside'
+import CampagnAside from '../components/CampagnAside'
 
 
 
@@ -367,72 +368,94 @@ export default function Example() {
           </div>
 
           <main className="py-10">
-            <div className="px-4 sm:px-6 lg:px-8 flex justify-between">
-                <h1 className='text-3xl'>Dashboard</h1>
+    <div className="px-4 sm:px-6 lg:px-8 flex justify-between">
+        <h1 className="text-3xl">Dashboard</h1>
 
-                <div className="text-center">
-                    <h3 className="items-center"> Job search status</h3>
-                    <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <MenuButton className="inline-flex w-full items-center justify-center gap-x-10 rounded-lg bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-        <svg viewBox="0 0 6 6" aria-hidden="true" className="h-1.5 w-1.5 fill-green-500">
-          <circle r={3} cx={3} cy={3} />
-        </svg>
-          Actively Jobs
-          <ChevronDownIcon aria-hidden="true" className="-mr-1 h-5 w-5 text-gray-400" />
-        </MenuButton>
-      </div>
-
-      <MenuItems
-        transition
-        className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-      >
-        <div className="py-1">
-          <MenuItem>
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-            >
-              Account settings
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-            >
-              Support
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-            >
-              License
-            </a>
-          </MenuItem>
-          <form action="#" method="POST">
-            <MenuItem>
-              <button
-                type="submit"
-                className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-              >
-                Sign out
-              </button>
-            </MenuItem>
-          </form>
-        </div>
-      </MenuItems>
-                    </Menu>
+        <div className="text-center">
+            <h3 className="items-center">Job search status</h3>
+            <Menu as="div" className="relative inline-block text-left">
+                <div>
+                    <MenuButton className="inline-flex w-full items-center justify-center gap-x-10 rounded-lg bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                        <svg viewBox="0 0 6 6" aria-hidden="true" className="h-1.5 w-1.5 fill-green-500">
+                            <circle r={3} cx={3} cy={3} />
+                        </svg>
+                        Actively Jobs
+                        <ChevronDownIcon aria-hidden="true" className="-mr-1 h-5 w-5 text-gray-400" />
+                    </MenuButton>
                 </div>
-            </div>
 
-            <div>
-                <Cards/>
-                <CompletedJobs/>
-            </div>
-          </main>
+                <MenuItems
+                    transition
+                    className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                >
+                    <div className="py-1">
+                        <MenuItem>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+                            >
+                                Account settings
+                            </a>
+                        </MenuItem>
+                        <MenuItem>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+                            >
+                                Support
+                            </a>
+                        </MenuItem>
+                        <MenuItem>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+                            >
+                                License
+                            </a>
+                        </MenuItem>
+                        <form action="#" method="POST">
+                            <MenuItem>
+                                <button
+                                    type="submit"
+                                    className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+                                >
+                                    Sign out
+                                </button>
+                            </MenuItem>
+                        </form>
+                    </div>
+                </MenuItems>
+            </Menu>
+        </div>
+    </div>
+
+    <div className="flex flex-wrap px-4 sm:px-6 lg:px-8">
+        <div className="w-full md:w-3/4 pr-4">
+            <Cards />
+        </div>
+        <div className="w-full mt-3 md:w-1/4">
+            <Aside />
+        </div>
+    </div>
+
+    <div className="flex flex-wrap px-4  mt-10 sm:px-6 lg:px-8">
+        <div className="w-full md:w-3/4 pr-4">
+            <CompletedJobs />
+        </div>
+        <div className="w-full mt-3 md:w-1/4 ">
+        <div className='flex items-center justify-center'>
+            <h1>upcoming campaigns</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
+          </svg>
+        </div>
+       
+
+            <CampagnAside />
+        </div>
+    </div>
+</main>
+
         </div>
       </div>
     </>
