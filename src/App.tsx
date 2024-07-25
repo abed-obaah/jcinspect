@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Signin from './screens/login';
-import Dashboard from './screens/Dashboard'
+import Dashboard from './screens/Dashboard';
+import Jobs from './screens/Jobs'
 
 export default function App() {
   // const [loggedIn, setLoggedIn] = useState(false);
@@ -22,6 +23,7 @@ export default function App() {
       <Routes>
         <Route path="/"  element={<Signin />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/jobs" element={<Jobs />} />
         {/* <Route path="/signup" element={<Signup />} /> */}
         {/* <Route
           path="/dashboard/*"
