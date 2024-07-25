@@ -24,10 +24,12 @@ import {
   HomeIcon,
   UsersIcon,
   XMarkIcon,
+  BookmarkIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import Logo from '../assets/dashlogo.png';
 import Cards from '../components/Cards'
+import CompletedJobs from '../components/CompletedJobs'
 
 
 
@@ -428,6 +430,7 @@ export default function Example() {
 
             <div>
                 <Cards/>
+                <CompletedJobs/>
             </div>
           </main>
         </div>
