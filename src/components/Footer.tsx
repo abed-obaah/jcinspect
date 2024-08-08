@@ -1,3 +1,5 @@
+import { SVGProps } from "react"
+import { JSX } from "react/jsx-runtime"
 import info from "../assets/info.png"
 import logo1 from '../assets/social1.png'
 import logo2 from '../assets/social2.png'
@@ -11,7 +13,7 @@ const navigation = [
     {
       name: 'Facebook',
       href: '#',
-      icon: (props) => (
+      icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <svg
           fill="currentColor"
           viewBox="0 0 38 38"
@@ -25,7 +27,7 @@ const navigation = [
     {
       name: 'Instagram',
       href: '#',
-      icon: (props) => (
+      icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <svg
           fill="currentColor"
           viewBox="0 0 38 38"
@@ -39,7 +41,7 @@ const navigation = [
     {
       name: 'X',
       href: '#',
-      icon: (props) => (
+      icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <svg
           fill="currentColor"
           viewBox="0 0 38 38"
@@ -53,7 +55,7 @@ const navigation = [
     {
       name: 'GitHub',
       href: '#',
-      icon: (props) => (
+      icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <svg
           fill="currentColor"
           viewBox="0 0 38 38"
@@ -67,7 +69,7 @@ const navigation = [
     {
       name: 'YouTube',
       href: '#',
-      icon: (props) => (
+      icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <svg
           fill="currentColor"
           viewBox="0 0 38 38"

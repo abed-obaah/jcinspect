@@ -4,7 +4,7 @@ import { ArrowLeft2,ArrowRight2,User,Lock} from "iconsax-react"
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Footer from '../components/Footer'
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 

@@ -1,4 +1,3 @@
-import { Aquarius } from 'iconsax-react'
 import Rec from '../assets/rec1.png'
 import Rec1 from '../assets/Rectangle 298.png'
 import Rec2 from '../assets/Rectangle 296.png'

@@ -15,16 +15,9 @@ import {
 } from '@headlessui/react'
 import {
   Bars3Icon,
-  BellIcon,
   CalendarIcon,
-  ChartPieIcon,
   Cog6ToothIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
-  HomeIcon,
-  UsersIcon,
   XMarkIcon,
-  BookmarkIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon, Squares2X2Icon,BriefcaseIcon,ChatBubbleLeftIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/react/20/solid'
 import Logo from '../assets/dashlogo.png';
@@ -58,7 +51,7 @@ const userNavigation = [
   { name: 'Sign out', href: '#' },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
@@ -67,14 +60,6 @@ export default function Example() {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
       <div>
         <Dialog open={sidebarOpen} onClose={setSidebarOpen} className=" relative z-50 lg:hidden">
           <DialogBackdrop
@@ -435,12 +420,10 @@ export default function Example() {
         <div className="w-full mt-3 md:w-1/4 ">
         <div className='flex items-center justify-center'>
             <h1>upcoming campaigns</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
           </svg>
         </div>
-       
-
             <CampagnAside />
         </div>
     </div>

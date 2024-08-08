@@ -1,11 +1,6 @@
-import { Aquarius, } from 'iconsax-react'
 import Rec from '../assets/Avalon-PNG 2.png'
 import Rec1 from '../assets/Avalon-PNG 1.png'
 // import Rec2 from '../assets/Rectangle 296.png'
-import help from '../assets/help.png'
-import {
-    Bookmark
-  } from '@heroicons/react/24/outline'
 
 const people = [
   {
