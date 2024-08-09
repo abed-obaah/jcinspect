@@ -1,0 +1,36 @@
+
+
+
+            import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+            import { ChevronDownIcon } from '@heroicons/react/20/solid'
+            
+            export default function Example() {
+              return (
+              <div>
+                    <div className="col-span-full">
+              <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">
+              Mobilization Details
+              </label>
+              <div className="mt-2">
+                <textarea
+                  id="about"
+                  name="about"
+                  rows={3}
+                  className="block w-full rounded-md border-0 py-3.5 px-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  defaultValue={''}
+                />
+                
+              </div>
+              <p className="mt-3 text-sm leading-6 text-gray-600"></p>
+              <button
+                    type="button"
+                    className="mx-auto block rounded-full bg-[#0A6835] px-8 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-50 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                    Assign
+                </button>
+
+            </div>
+              </div>
+              )
+            }
+            

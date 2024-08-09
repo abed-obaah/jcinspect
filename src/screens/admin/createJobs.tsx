@@ -22,25 +22,19 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon, Squares2X2Icon,BriefcaseIcon,ChatBubbleLeftIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/react/20/solid'
 import Logo from '../../assets/dashlogo.png';
-import Cards from '../../components/Cards'
-import CompletedJobs from '../../components/CompletedJobs'
+
 import Aside from '../../components/Aside'
 import CampagnAside from '../../components/CampagnAside'
-import Stats from '../../components/adminComponents/stats'
-import CardStats from '../../components/adminComponents/cardStats'
-import Analytics from '../../components/adminComponents/analytics'
-import Projects from '../../components/adminComponents/projects'
-
+import Types from '../../components/adminComponents/createJobs'
 
 
 import {Message,Notification,Award, Clipboard, FolderCloud, Notepad} from 'iconsax-react'
-import { ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline'
 import { ChartPieIcon } from '@heroicons/react/24/solid'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: Squares2X2Icon, current: true },
-  { name: 'User Management', href: '/manage-user', icon: UserCircleIcon, current: false },
-  { name: 'My jobs', href: '/admin-jobs', icon: BriefcaseIcon, current: false },
+  { name: 'Dashboard', href: "/adminDashboard", icon: Squares2X2Icon, current: false },
+  { name: 'User Management', href: '/manage-user', icon: UserCircleIcon, current: false},
+  { name: 'My jobs', href: '/admin-jobs', icon: BriefcaseIcon, current: true },
   { name: 'Certification', href: '#', icon: Clipboard, current: false },
   { name: 'Projects', href: '#', icon: FolderCloud, current: false },
   { name: 'Templates', href: '#', icon: Notepad, current: false },
@@ -353,7 +347,8 @@ export default function Example() {
 
           <main className="py-10">
     <div className="px-4 sm:px-6 lg:px-8 flex justify-between">
-        <h1 className="text-3xl">admin Dashboard</h1>
+        <h1 className="text-3xl">Assign Jobs</h1>
+       
 
         <div className="text-center">
             <h3 className="items-center">Job search status</h3>
@@ -415,9 +410,7 @@ export default function Example() {
 
     <div className="flex flex-wrap px-4 sm:px-6 lg:px-8">
         <div className="w-full md:w-3/4 pr-4">
-            {/* <Cards /> */}
-                        <Stats />
-                        <CardStats/>
+        <Types />
         </div>
         <div className="w-full mt-3 md:w-1/4">
             <Aside />
@@ -426,7 +419,7 @@ export default function Example() {
 
     <div className="flex flex-wrap px-4  mt-10 sm:px-6 lg:px-8">
         <div className="w-full md:w-3/4 pr-4">
-        <Analytics/>
+        {/* <Modules /> */}
         
         </div>
         <div className="w-full mt-3 md:w-1/4 ">
