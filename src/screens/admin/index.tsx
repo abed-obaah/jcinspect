@@ -27,6 +27,8 @@ import Aside from '../../components/Aside'
 import CampagnAside from '../../components/CampagnAside'
 import Stats from '../../components/adminComponents/stats'
 import CardStats from '../../components/adminComponents/cardStats'
+import Analytics from '../../components/adminComponents/analytics'
+import Projects from '../../components/adminComponents/projects'
 
 
 
@@ -417,7 +419,8 @@ export default function Example() {
 
     <div className="flex flex-wrap px-4  mt-10 sm:px-6 lg:px-8">
         <div className="w-full md:w-3/4 pr-4">
-            <CompletedJobs />
+        <Analytics/>
+        {/* <Projects/> */}
         </div>
         <div className="w-full mt-3 md:w-1/4 ">
         <div className='flex items-center justify-center'>
@@ -426,6 +429,7 @@ export default function Example() {
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
           </svg>
         </div>
+        
             <CampagnAside />
             
         </div>
