@@ -34,6 +34,8 @@ export default function Example() {
           Welcome to JCInspect
           </h2>
           <p className="mt-2 text-center text-xl zen-kaku-gothic-antique-regular leading-9 tracking-tight text-[#757575]">SIGN IN TO  INSPECT</p>
+          <Link to="/adminDashboard">
+          <a >admin login here</a></Link>
         </div>
 
         <div className="mt-10 mb-10 sm:mx-auto sm:w-full sm:max-w-sm">

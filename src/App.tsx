@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Signin from './screens/login';
 import Dashboard from './screens/Dashboard';
+import AdminDashboard from './screens/admin/index'
 import Jobs from './screens/Jobs'
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
       <Routes>
         <Route path="/"  element={<Signin />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/adminDashboard" element={<AdminDashboard/>} />
         <Route path="/jobs" element={<Jobs />} />
       </Routes>
     </Router>
