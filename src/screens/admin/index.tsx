@@ -41,7 +41,7 @@ const navigation = [
   { name: 'Dashboard', href: '#', icon: Squares2X2Icon, current: true },
   { name: 'User Management', href: '/manage-user', icon: UserCircleIcon, current: false },
   { name: 'My jobs', href: '/admin-jobs', icon: BriefcaseIcon, current: false },
-  { name: 'Certification', href: '#', icon: Clipboard, current: false },
+  { name: 'Certification',href: '/certification', icon: Clipboard, current: false },
   { name: 'Projects', href: '#', icon: FolderCloud, current: false },
   { name: 'Templates', href: '#', icon: Notepad, current: false },
   { name: 'Performance Evaluation', href: '#', icon: ChartPieIcon, current: false },

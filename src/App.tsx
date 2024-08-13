@@ -8,7 +8,11 @@ import ViewUser from './screens/admin/ViewUsers'
 import Adminjobs from './screens/admin/jobs'
 import Assignjobs from './screens/admin/assignJobs'
 import Createjobs from './screens/admin/createJobs'
-import Trackjobs from './screens/admin/TrackJobs'
+import Trackjobs from './screens/admin/TrackJobs';
+import AddUser from './screens/admin/AddUser';
+import PriortizeJobs from './screens/admin/priortizeJobs';
+import InspectJobs from './screens/admin/InspectJobs';
+import Certification from './screens/admin/certification';
 
 export default function App() {
   // const [loggedIn, setLoggedIn] = useState(false);
@@ -31,12 +35,16 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/adminDashboard" element={<AdminDashboard/>} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path='/certification' element={<Certification/>} />
         <Route path="/admin-jobs" element={<Adminjobs />} />
         <Route path="/manage-user" element={<UserManagement />} />
         <Route path="/view-users" element={<ViewUser />} />
+        <Route path="/add-users" element={<AddUser />} />
         <Route path="/assign-jobs" element={<Assignjobs />} />
         <Route path="/create-jobs" element={<Createjobs />} />
         <Route path="/track-jobs" element={<Trackjobs />} />
+        <Route path='/priortize-jobs' element={<PriortizeJobs/>} />
+        <Route path='/inspect-jobs' element={<InspectJobs/>} />
         {/* <Route path="/add-user" element={<AddUser />} />
         <Route path="/user-permissions" element={<UserPermissions />} />
         <Route path="/suspend-user" element={<SuspendUser />} />

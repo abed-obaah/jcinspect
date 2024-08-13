@@ -13,8 +13,8 @@ const people = [
   { name: 'Create Jobs', button: "Create", icon: ClipboardIcon, route: "/create-jobs" },
   { name: 'Assign Jobs', button: "Assign", icon: People, route: "/assign-jobs" },
   { name: 'Track Jobs', button: "Track", icon: ChartBarSquareIcon, route: "/track-jobs" },
-  { name: 'Prioritize Jobs', button: "Set", icon: Trade, route: "/suspend-user" },
-  { name: 'Inspect', button: "Inspect", icon: MagnifyingGlassCircleIcon, route: "/delete-user" },
+  { name: 'Prioritize Jobs', button: "Set", icon: Trade, route: "/priortize-jobs" },
+  { name: 'Inspect', button: "Inspect", icon: MagnifyingGlassCircleIcon, route: "/inspect-jobs" },
 //   { name: 'User Activities', button: "View", icon: MagnifyingGlassCircleIcon, route: "/user-activities" },
 ];
 

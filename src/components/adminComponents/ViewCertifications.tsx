@@ -7,14 +7,15 @@ import {
     InboxArrowDownIcon, 
     MagnifyingGlassCircleIcon 
 } from '@heroicons/react/20/solid';
+import { People, Trade } from 'iconsax-react';
 
 const people = [
-  { name: 'View Users', button: "View", icon: ClipboardIcon, route: "/view-users" },
-  { name: 'Add Users', button: "Add", icon: ChatBubbleBottomCenterIcon, route: "/add-users" },
-  { name: 'View User permissions', button: "View", icon: ChartBarSquareIcon, route: "/user-permissions" },
-  { name: 'Suspend User', button: "Suspend", icon: InboxArrowDownIcon, route: "/suspend-user" },
-  { name: 'Delete User Account', button: "Delete", icon: MagnifyingGlassCircleIcon, route: "/delete-user" },
-  { name: 'User Activities', button: "View", icon: MagnifyingGlassCircleIcon, route: "/user-activities" },
+  { name: 'Review Jobs', button: "Review", icon: ClipboardIcon, route: "/create-jobs" },
+  { name: 'Reports', button: "View", icon: People, route: "/assign-jobs" },
+  { name: 'Inspect', button: "Track", icon: ChartBarSquareIcon, route: "/track-jobs" },
+  { name: 'Prioritize Jobs', button: "Set", icon: Trade, route: "/priortize-jobs" },
+  { name: 'View Job Completion Certificate', button: "View", icon: MagnifyingGlassCircleIcon, route: "/inspect-jobs" },
+//   { name: 'User Activities', button: "View", icon: MagnifyingGlassCircleIcon, route: "/user-activities" },
 ];
 
 export default function Example() {
@@ -23,7 +24,7 @@ export default function Example() {
   return (
     <div className="overflow-hidden rounded-lg bg-white shadow">
       <div className="px-4 py-5 sm:p-6">
-        {/* <h1 className="text-xl font-semibold mb-4">My Jobs</h1> */}
+        <h1 className="text-xl font-semibold mb-4">Jobs</h1>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-1">
           {people.map((person) => (

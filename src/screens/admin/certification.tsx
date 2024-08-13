@@ -32,7 +32,7 @@ import Cards from '../components/Cards'
 import CompletedJobs from '../../components/CompletedJobs'
 import Aside from '../../components/Aside'
 import CampagnAside from '../../components/CampagnAside'
-import JobCard from '../../components/adminComponents/userCard'
+import JobCard from '../../components/adminComponents/ViewCertifications'
 
 
 
@@ -41,31 +41,31 @@ import JobCard from '../../components/adminComponents/userCard'
 import {Message,Notification,Award, FolderCloud, Notepad, Clipboard} from 'iconsax-react'
 
 const navigation = [
-  { name: 'Dashboard', href: "/adminDashboard", icon: Squares2X2Icon, current: false },
-  { name: 'User Management', href: '/manage-user', icon: UserCircleIcon, current: true },
-  { name: 'My jobs', href: '/admin-jobs', icon: BriefcaseIcon, current: false },
-  { name: 'Certification',href: '/certification', icon: Clipboard, current: false },
-  { name: 'Projects', href: '#', icon: FolderCloud, current: false },
-  { name: 'Templates', href: '#', icon: Notepad, current: false },
-  { name: 'Performance Evaluation', href: '#', icon: ChartPieIcon, current: false },
-  { name: 'FeedBack', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Timesheet', href: '#', icon: Cog6ToothIcon, current: false },
-  // { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
-]
-const teams = [
-  { id: 1, name: 'Explore more', href: '#', current: false },
-  // { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-  // { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
-]
-
-const userNavigation = [
-  { name: 'Your profile', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
+    { name: 'Dashboard', href: "/adminDashboard", icon: Squares2X2Icon, current: false },
+    { name: 'User Management', href: '/manage-user', icon: UserCircleIcon, current: false },
+    { name: 'My jobs', href: '/admin-jobs', icon: BriefcaseIcon, current: false },
+    { name: 'Certification', href: '#', icon: Clipboard, current: true },
+    { name: 'Projects', href: '#', icon: FolderCloud, current: false },
+    { name: 'Templates', href: '#', icon: Notepad, current: false },
+    { name: 'Performance Evaluation', href: '#', icon: ChartPieIcon, current: false },
+    { name: 'FeedBack', href: '#', icon: CalendarIcon, current: false },
+    { name: 'Timesheet', href: '#', icon: Cog6ToothIcon, current: false },
+    // { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
+  ]
+  const teams = [
+    { id: 1, name: 'Explore more', href: '#', current: false },
+    // { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
+    // { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
+  ]
+  
+  const userNavigation = [
+    { name: 'Your profile', href: '#' },
+    { name: 'Sign out', href: '#' },
+  ]
+  
+  function classNames(...classes: string[]) {
+    return classes.filter(Boolean).join(' ')
+  }
 
 export default function Example() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -352,7 +352,7 @@ export default function Example() {
 
           <main className="py-10">
     <div className="px-4 sm:px-6 lg:px-8 flex justify-between">
-        <h1 className="text-3xl">Manage users</h1>
+        <h1 className="text-3xl">Job Completion Certificate </h1>
 
         <div className="text-center">
             <h3 className="items-center">Job search status</h3>
@@ -386,3 +386,4 @@ export default function Example() {
     </>
   )
 }
+// 
