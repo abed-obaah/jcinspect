@@ -17,31 +17,27 @@ import {
   Bars3Icon,
   CalendarIcon,
   Cog6ToothIcon,
-  UserCircleIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon, Squares2X2Icon,BriefcaseIcon,ChatBubbleLeftIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/react/20/solid'
-import Logo from '../assets/dashlogo.png';
+import Logo from '../../assets/dashlogo.png';
+import Cards from '../../components/inspectorsComponents/Reports'
+import CompletedJobs from '../../components/CompletedJobs'
+import Aside from '../../components/Aside'
+import CampagnAside from '../../components/CampagnAside'
 
-import Aside from '../components/Aside'
-import CampagnAside from '../components/CampagnAside'
-import Types from '../components/singleInspection'
 
 
-import {Message,Notification,Award, Clipboard, FolderCloud, Notepad} from 'iconsax-react'
-import { ChartPieIcon } from '@heroicons/react/24/solid'
-import { Link } from 'react-router-dom';
+
+
+import {Message,Notification,Award} from 'iconsax-react'
 
 const navigation = [
-  { name: 'Dashboard', href: "/dashboard", icon: Squares2X2Icon, current: false },
-  { name: 'User Management', href: '/manage-users', icon: UserCircleIcon, current: false},
-  { name: 'My jobs', href: '/jobs', icon: BriefcaseIcon, current: true },
-  { name: 'Certification',href: '/certification', icon: Clipboard, current: false },
-  { name: 'Projects', href: '#', icon: FolderCloud, current: false },
-  { name: 'Templates', href: '#', icon: Notepad, current: false },
-  { name: 'Performance Evaluation', href: '#', icon: ChartPieIcon, current: false },
-  { name: 'FeedBack', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Timesheet', href: '#', icon: Cog6ToothIcon, current: false },
+  { name: 'Dashboard', href: '#', icon: Squares2X2Icon, current: false },
+  { name: 'My jobs', href: '/jobs', icon: BriefcaseIcon, current: false },
+  { name: 'JFC/Time Sheet', href: '#', icon: ChatBubbleLeftIcon, current: false },
+  { name: 'Status Report', href: '/Reports', icon: CalendarIcon, current: true },
+  { name: 'Settings', href: '#', icon: Cog6ToothIcon, current: false },
   // { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
 ]
 const teams = [
@@ -348,8 +344,7 @@ export default function Example() {
 
           <main className="py-10">
     <div className="px-4 sm:px-6 lg:px-8 flex justify-between">
-        <h1 className="text-3xl">Inspection checklist</h1>
-       
+        <h1 className="text-3xl">Dashboard</h1>
 
         <div className="text-center">
             <h3 className="items-center">Job search status</h3>
@@ -410,55 +405,30 @@ export default function Example() {
     </div>
 
     <div className="flex flex-wrap px-4 sm:px-6 lg:px-8">
-        <div className="w-full md:w-3/4 pr-4">
-        <Types />
-        <div className="flex justify-evenly mt-80">
-          <Link to={"/single-inspect"}>
-              <button
-                  type="button"
-                  className="w-60 rounded-xl bg-[#0E1951] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-100 hover:text-black focus:outline-none"
-                >
-                  Single item Inspections
-                </button>
-          </Link>
-          <button
-            type="button"
-            className="w-60  rounded-xl bg-[#0E1951] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-100 hover:text-black focus:outline-none"
-          >
-            Batch Inspection (AUTO)t
-          </button>
-          
-          
-          <button
-            type="button"
-            className="w-60  rounded-xl bg-[#0E1951] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-100 hover:text-black focus:outline-none"
-          >
-           Batch Inspection (MANUAL)
-          </button>
-        </div>
-        </div>
-        <div className="w-full mt-3 md:w-1/4">
-            <Aside />
-        </div>
+    <div className="w-full md:w-3/4 pr-4">
+        <Cards />
     </div>
+    <div className="w-full mt-3 md:w-1/4">
+        <Aside />
+    </div>
+</div>
 
-    <div className="flex flex-wrap px-4  mt-10 sm:px-6 lg:px-8">
-        <div className="w-full md:w-3/4 pr-4">
-        {/* <Modules /> */}
-        
-        </div>
-        <div className="w-full mt-3 md:w-1/4 ">
-        <div className='flex items-center justify-center'>
-            <h1>upcoming campaigns</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
-          </svg>
-        </div>
-        
-            <CampagnAside />
-            
-        </div>
+<div className="flex flex-wrap px-4 sm:px-6 lg:px-8 -mt-[30%]">
+    <div className="w-full md:w-3/4 pr-4">
+        {/* <CompletedJobs /> */}
     </div>
+    <div className="w-full mt-3 md:w-1/4">
+        <div className='flex items-center justify-center gap-2'>
+            <h1 className="text-lg font-semibold">Upcoming Campaigns</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
+            </svg>
+        </div>
+        <CampagnAside />
+    </div>
+</div>
+
+
 </main>
 
         </div>

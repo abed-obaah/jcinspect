@@ -35,7 +35,7 @@ import {Message,Notification,Award} from 'iconsax-react'
 
 const navigation = [
   { name: 'Dashboard', href: '#', icon: Squares2X2Icon, current: true },
-  { name: 'My jobs', href: '/jobs', icon: BriefcaseIcon, current: false },
+  { name: 'My jobs', href: '/Scheduler-jobs', icon: BriefcaseIcon, current: false },
   { name: 'JFC/Time Sheet', href: '#', icon: ChatBubbleLeftIcon, current: false },
   { name: 'Status Report', href: '#', icon: CalendarIcon, current: false },
   { name: 'Settings', href: '#', icon: Cog6ToothIcon, current: false },

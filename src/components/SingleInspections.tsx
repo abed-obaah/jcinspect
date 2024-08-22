@@ -32,9 +32,9 @@ import {Message,Notification,Award, Clipboard, FolderCloud, Notepad, Link} from 
 import { ChartPieIcon } from '@heroicons/react/24/solid'
 
 const navigation = [
-  { name: 'Dashboard', href: "/adminDashboard", icon: Squares2X2Icon, current: false },
+  { name: 'Dashboard', href: "/", icon: Squares2X2Icon, current: false },
   { name: 'User Management', href: '/manage-user', icon: UserCircleIcon, current: false},
-  { name: 'My jobs', href: '/admin-jobs', icon: BriefcaseIcon, current: true },
+  { name: 'My jobs', href: '/jobs', icon: BriefcaseIcon, current: true },
   { name: 'Certification',href: '/certification', icon: Clipboard, current: false },
   { name: 'Projects', href: '#', icon: FolderCloud, current: false },
   { name: 'Templates', href: '#', icon: Notepad, current: false },

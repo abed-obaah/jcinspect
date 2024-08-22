@@ -17,6 +17,7 @@ import Scheduler from './screens/Scheduler/index'
 import JobReview from './components/JobReview';
 import InspectionChecklist from './components/inspectionChecklist'
 import SingleInspect from './components/SingleInspections';
+import Reports from './screens/inspector/reportsScreen'
 export default function App() {
   // const [loggedIn, setLoggedIn] = useState(false);
   // const [userData, setUserData] = useState(null);
@@ -58,6 +59,7 @@ export default function App() {
         <Route path="JobReview" element={<JobReview/>}/>
         <Route path="inspectionChecklist" element={<InspectionChecklist/>}/>
         <Route path='/single-inspect' element={<SingleInspect/>}/>
+        <Route path='/Reports' element={<Reports/>}/>
         {/* inspectionChecklist */}
       </Routes>
     </Router>

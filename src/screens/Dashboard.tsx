@@ -36,7 +36,7 @@ const navigation = [
   { name: 'Dashboard', href: '#', icon: Squares2X2Icon, current: true },
   { name: 'My jobs', href: '/jobs', icon: BriefcaseIcon, current: false },
   { name: 'JFC/Time Sheet', href: '#', icon: ChatBubbleLeftIcon, current: false },
-  { name: 'Status Report', href: '#', icon: CalendarIcon, current: false },
+  { name: 'Status Report', href: '/Reports', icon: CalendarIcon, current: false },
   { name: 'Settings', href: '#', icon: Cog6ToothIcon, current: false },
   // { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
 ]

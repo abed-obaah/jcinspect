@@ -44,7 +44,7 @@ const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: Squares2X2Icon, current: false },
   { name: 'My jobs', href: '#', icon: BriefcaseIcon, current: true },
   { name: 'JFC/Time Sheet', href: '#', icon: ChatBubbleLeftIcon, current: false },
-  { name: 'Status Report', href: '#', icon: CalendarIcon, current: false },
+  { name: 'Status Report',  href: '/Reports', icon: CalendarIcon, current: false },
   { name: 'Settings', href: '#', icon: Cog6ToothIcon, current: false },
   // { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
 ]
