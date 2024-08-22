@@ -1,59 +1,53 @@
-// import React from 'react';
 import { 
     ClipboardIcon,
     ChatBubbleBottomCenterIcon
-    } from '@heroicons/react/24/outline';
-    import {  ChartBarSquareIcon, InboxArrowDownIcon, MagnifyingGlassCircleIcon } from '@heroicons/react/20/solid'
-import { useNavigate } from 'react-router-dom';
+} from '@heroicons/react/24/outline';
+import {  
+    ChartBarSquareIcon, 
+    InboxArrowDownIcon, 
+    MagnifyingGlassCircleIcon 
+} from '@heroicons/react/20/solid';
 
 const people = [
   {
     name: 'Assigned Job',
     button: "View",
-    icon:ClipboardIcon,
-    route: "/JobReview" 
+    icon: ClipboardIcon
   },
   {
     name: 'Create site',
     button: "Create",
-    icon:ChatBubbleBottomCenterIcon
-    ,
-    route: "/create-jobs" 
+    icon: ChatBubbleBottomCenterIcon
   },
   {
     name: 'Site Summary',
     button: "View",
-    icon:ChartBarSquareIcon,
-    route: "/create-jobs" 
+    icon: ChartBarSquareIcon,
   },
   {
-    name: 'Import Site  Register',
+    name: 'Import Site Register',
     button: "Import",
-    icon:InboxArrowDownIcon,
-    route: "/create-jobs" 
+    icon: InboxArrowDownIcon,
   },
   {
-    name: 'Inspect Site  Register',
+    name: 'Inspect Site Register',
     button: "Inspect",
-    icon:MagnifyingGlassCircleIcon,
-    route: "/create-jobs" 
+    icon: MagnifyingGlassCircleIcon,
   },
   // More people...
 ];
 
 export default function Example() {
-  const navigate = useNavigate();
   return (
-    <div className="overflow-hidden rounded-lg bg-white shadow">
+    <div className="overflow-hidden rounded-lg bg-white shadow max-w-5xl mx-auto">
       <div className="px-4 py-5 sm:p-6">
         <h1 className="text-xl font-semibold mb-4">My Jobs</h1>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-1">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {people.map((person) => (
             <div
               key={person.name}
-              onClick={() => navigate(person.route)} // Handle navigation on click
-              className="relative flex items-center space-x-4 rounded-lg border border-gray-300 bg-white px-4 py-3 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400 cursor-pointer"
+              className="relative flex items-center space-x-4 rounded-lg border border-gray-300 bg-white px-4 py-3 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
             >
               <div className="flex items-center space-x-2 bg-white rounded-md p-3 shadow">
                 <person.icon className="h-5 w-5 text-black" aria-hidden="true" />

@@ -10,10 +10,13 @@ import Assignjobs from './screens/admin/assignJobs'
 import Createjobs from './screens/admin/createJobs'
 import Trackjobs from './screens/admin/TrackJobs';
 import AddUser from './screens/admin/AddUser';
-import PriortizeJobs from './screens/admin/priortizeJobs';
+import PriortizeJobs from './screens/admin/PriortizeJobs';
 import InspectJobs from './screens/admin/InspectJobs';
 import Certification from './screens/admin/certification';
-
+import Scheduler from './screens/Scheduler/index'
+import JobReview from './components/JobReview';
+import InspectionChecklist from './components/inspectionChecklist'
+import SingleInspect from './components/SingleInspections';
 export default function App() {
   // const [loggedIn, setLoggedIn] = useState(false);
   // const [userData, setUserData] = useState(null);
@@ -50,6 +53,12 @@ export default function App() {
         <Route path="/suspend-user" element={<SuspendUser />} />
         <Route path="/delete-user" element={<DeleteUserAccount />} />
         <Route path="/user-activities" element={<UserActivities />} /> */}
+
+        <Route path="/scheduler" element={<Scheduler/>} />
+        <Route path="JobReview" element={<JobReview/>}/>
+        <Route path="inspectionChecklist" element={<InspectionChecklist/>}/>
+        <Route path='/single-inspect' element={<SingleInspect/>}/>
+        {/* inspectionChecklist */}
       </Routes>
     </Router>
   );

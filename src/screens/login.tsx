@@ -16,7 +16,10 @@ export default function Example() {
     e.preventDefault();
     if (email === 'admin@gmail.com') {
       navigate('/adminDashboard');
-    } else {
+    } else if (email === 'scheduler@gmail.com'){
+        navigate('/scheduler');
+    }
+    else {
       navigate('/dashboard');
     }
   };
