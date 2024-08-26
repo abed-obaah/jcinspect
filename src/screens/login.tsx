@@ -49,7 +49,7 @@ export default function Example() {
             </Link> */}
           </div>
 
-          <div className="mt-10 mb-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <div className="mt-10 mb-28 sm:mx-auto sm:w-full sm:max-w-sm">
             <form onSubmit={handleSignIn} className="space-y-6">
               <div>
                 <div className="mt-2">
@@ -121,8 +121,9 @@ export default function Example() {
                 </button>
               </div>
             </form>
-            <Footer />
+           
           </div>
+          <Footer />
         </div>
       </div>
     </div>

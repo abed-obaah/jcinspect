@@ -87,8 +87,8 @@ const navigation = [
 
 export default function Example() {
   return (
-    <footer className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+    <footer className="bg-white pt-[10]">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center items-center space-x-2 md:order-2">
           <img
             alt=""
