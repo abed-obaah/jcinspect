@@ -46,7 +46,7 @@ const navigation = [
     { name: 'My jobs', href: '#', icon: BriefcaseIcon, current: true },
     { name: 'Certification', href: '/certification', icon: Clipboard, current: false },
     { name: 'Projects', href: '#', icon: FolderCloud, current: false },
-    { name: 'Templates', href: '#', icon: Notepad, current: false },
+    { name: 'Templates', href: '/templates', icon: Notepad, current: false },
     { name: 'Performance Evaluation', href: '#', icon: ChartPieIcon, current: false },
     { name: 'FeedBack', href: '#', icon: CalendarIcon, current: false },
     { name: 'Timesheet', href: '#', icon: Cog6ToothIcon, current: false },

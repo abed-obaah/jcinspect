@@ -29,7 +29,7 @@ import CampagnAside from '../../components/CampagnAside'
 import Stats from '../../components/adminComponents/stats'
 import CardStats from '../../components/adminComponents/cardStats'
 import Analytics from '../../components/adminComponents/analytics'
-import Types from '../../components/adminComponents/types'
+import Types from '../../components/adminComponents/usersTable'
 import Forms from '../../components/adminComponents/forms'
 
 import Modules from '../../components/adminComponents/modules'
@@ -44,7 +44,7 @@ const navigation = [
   { name: 'My jobs', href: '/admin-jobs', icon: BriefcaseIcon, current: false },
   { name: 'Certification',href: '/certification', icon: Clipboard, current: false },
   { name: 'Projects', href: '#', icon: FolderCloud, current: false },
-  { name: 'Templates', href: '#', icon: Notepad, current: false },
+  { name: 'Templates', href: '/templates', icon: Notepad, current: false },
   { name: 'Performance Evaluation', href: '#', icon: ChartPieIcon, current: false },
   { name: 'FeedBack', href: '#', icon: CalendarIcon, current: false },
   { name: 'Timesheet', href: '#', icon: Cog6ToothIcon, current: false },
@@ -417,9 +417,9 @@ export default function Example() {
 
     <div className="flex flex-wrap px-4 sm:px-6 lg:px-8">
         <div className="w-full md:w-3/4 pr-4">
-        <p className='text-sm'>User type</p>
+        {/* <p className='text-sm'>User type</p> */}
         <Types />
-        <Forms/>
+        {/* <Forms/> */}
             {/* <Cards /> */}
                         {/* <Stats /> */}
                         {/* <CardStats/> */}
@@ -431,7 +431,7 @@ export default function Example() {
 
     <div className="flex flex-wrap px-4  mt-10 sm:px-6 lg:px-8">
         <div className="w-full md:w-3/4 pr-4">
-        <Modules />
+        {/* <Modules /> */}
         
         </div>
         <div className="w-full mt-3 md:w-1/4 ">
