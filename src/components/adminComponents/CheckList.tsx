@@ -7,15 +7,14 @@ import {
     InboxArrowDownIcon, 
     MagnifyingGlassCircleIcon 
 } from '@heroicons/react/20/solid';
-import { People,UserRemove,Trash,FavoriteChart} from 'iconsax-react';
+import { People, Trade } from 'iconsax-react';
 
 const people = [
-  { name: 'Check List', button: "Create", icon: ClipboardIcon, route: "/viewChecklist" },
-  { name: 'report Template', button: "Assign", icon: People, route: "/assign-jobs" },
-  { name: 'View User permissions', button: "Track", icon: ChartBarSquareIcon, route: "/track-jobs" },
-  { name: 'Suspend User', button: "Set", icon: UserRemove, route: "/priortize-jobs" },
-  { name: 'Delete User Account', button: "Inspect", icon: Trash, route: "/inspect-jobs" },
-  { name: 'User Activities', button: "Inspect", icon: FavoriteChart, route: "/inspect-jobs" },
+  { name: 'Check List', button: "View", icon: ClipboardIcon, route: "/create-jobs" },
+  { name: 'Create', button: "Add", icon: People, route: "/assign-jobs" },
+  { name: 'Edit Checklist', button: "Edit", icon: ChartBarSquareIcon, route: "/track-jobs" },
+  { name: 'Delete Checklist', button: "Delete", icon: Trade, route: "/priortize-jobs" },
+//   { name: 'Inspect', button: "Inspect", icon: MagnifyingGlassCircleIcon, route: "/inspect-jobs" },
 //   { name: 'User Activities', button: "View", icon: MagnifyingGlassCircleIcon, route: "/user-activities" },
 ];
 

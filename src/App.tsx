@@ -18,7 +18,8 @@ import JobReview from './components/JobReview';
 import InspectionChecklist from './components/inspectionChecklist'
 import SingleInspect from './components/SingleInspections';
 import Reports from './screens/inspector/reportsScreen';
-import Templates from './screens/admin/Templates'
+import Templates from './screens/admin/Templates';
+import ViewChecklist from './screens/admin/ViewChecklist'
 export default function App() {
   // const [loggedIn, setLoggedIn] = useState(false);
   // const [userData, setUserData] = useState(null);
@@ -62,6 +63,7 @@ export default function App() {
         <Route path='/single-inspect' element={<SingleInspect/>}/>
         <Route path='/Reports' element={<Reports/>}/>
         <Route path='/templates' element={<Templates/>}/>
+        <Route path='/viewChecklist' element={<ViewChecklist />}/>
         {/* inspectionChecklist */}
       </Routes>
     </Router>
