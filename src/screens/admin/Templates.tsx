@@ -43,10 +43,10 @@ import {Message,Notification,Award, FolderCloud, Notepad, Clipboard} from 'icons
 const navigation = [
     { name: 'Dashboard', href: "/adminDashboard", icon: Squares2X2Icon, current: false },
     { name: 'User Management', href: '/manage-user', icon: UserCircleIcon, current: false },
-    { name: 'My jobs', href: '#', icon: BriefcaseIcon, current: true },
+    { name: 'My jobs', href: '#', icon: BriefcaseIcon, current: false },
     { name: 'Certification', href: '/certification', icon: Clipboard, current: false },
     { name: 'Projects', href: '#', icon: FolderCloud, current: false },
-    { name: 'Templates', href: '/templates', icon: Notepad, current: false },
+    { name: 'Templates', href: '/templates', icon: Notepad, current: true },
     { name: 'Performance Evaluation', href: '#', icon: ChartPieIcon, current: false },
     { name: 'FeedBack', href: '#', icon: CalendarIcon, current: false },
     { name: 'Timesheet', href: '#', icon: Cog6ToothIcon, current: false },

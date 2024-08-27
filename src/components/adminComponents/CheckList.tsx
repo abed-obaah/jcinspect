@@ -10,7 +10,7 @@ import {
 import { People, Trade } from 'iconsax-react';
 
 const people = [
-  { name: 'Check List', button: "View", icon: ClipboardIcon, route: "/create-jobs" },
+  { name: 'Check List', button: "View", icon: ClipboardIcon, route: "/CheckList" },
   { name: 'Create', button: "Add", icon: People, route: "/assign-jobs" },
   { name: 'Edit Checklist', button: "Edit", icon: ChartBarSquareIcon, route: "/track-jobs" },
   { name: 'Delete Checklist', button: "Delete", icon: Trade, route: "/priortize-jobs" },

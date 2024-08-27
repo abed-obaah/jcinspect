@@ -20,6 +20,7 @@ import SingleInspect from './components/SingleInspections';
 import Reports from './screens/inspector/reportsScreen';
 import Templates from './screens/admin/Templates';
 import ViewChecklist from './screens/admin/ViewChecklist'
+import CheckList from './screens/admin/CheckList'
 export default function App() {
   // const [loggedIn, setLoggedIn] = useState(false);
   // const [userData, setUserData] = useState(null);
@@ -64,6 +65,7 @@ export default function App() {
         <Route path='/Reports' element={<Reports/>}/>
         <Route path='/templates' element={<Templates/>}/>
         <Route path='/viewChecklist' element={<ViewChecklist />}/>
+        <Route path='/CheckList' element={<CheckList/>}/>
         {/* inspectionChecklist */}
       </Routes>
     </Router>

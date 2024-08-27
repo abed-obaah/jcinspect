@@ -32,7 +32,7 @@ import Cards from '../components/Cards'
 import CompletedJobs from '../../components/CompletedJobs'
 import Aside from '../../components/Aside'
 import CampagnAside from '../../components/CampagnAside'
-import JobCard from '../../components/adminComponents/CheckList'
+import JobCard from '../../components/adminComponents/CheckListForm'
 
 
 
@@ -352,7 +352,7 @@ export default function Example() {
 
           <main className="py-10">
     <div className="px-4 sm:px-6 lg:px-8 flex justify-between">
-        <h1 className="text-3xl">CheckList</h1>
+        <h1 className="text-3xl">My Jobs</h1>
 
         <div className="text-center">
             <h3 className="items-center">Job search status</h3>
