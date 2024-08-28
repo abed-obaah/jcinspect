@@ -14,7 +14,7 @@ const people = [
   { name: 'Assign Jobs', button: "Assign", icon: People, route: "/assign-jobs" },
   { name: 'Track Jobs', button: "Track", icon: ChartBarSquareIcon, route: "/track-jobs" },
   { name: 'Prioritize Jobs', button: "Set", icon: Trade, route: "/priortize-jobs" },
-  { name: 'Inspect', button: "Inspect", icon: MagnifyingGlassCircleIcon, route: "/inspect-jobs" },
+  { name: 'Inspect', button: "Inspect", icon: MagnifyingGlassCircleIcon, route: "/pending-jobs" },
 //   { name: 'User Activities', button: "View", icon: MagnifyingGlassCircleIcon, route: "/user-activities" },
 ];
 
