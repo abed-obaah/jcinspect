@@ -420,9 +420,6 @@ export default function Example() {
         <p className='text-sm'>User type</p>
         <Types />
         <Forms/>
-            {/* <Cards /> */}
-                        {/* <Stats /> */}
-                        {/* <CardStats/> */}
         </div>
         <div className="w-full mt-3 md:w-1/4">
             <Aside />

@@ -11,8 +11,9 @@ const barChartsParams = {
     },
   ],
   series: [
-    { data: [2, 5, 3, 4, 1, 6, 8, 7, 5, 3, 2, 4], stack: '1', label: 'Jobs Applied', color: '#5932EA' },
-    { data: [8, 6, 7, 5, 3, 4, 9, 2, 10, 6, 8, 7], stack: '1', label: 'Jobs viewed', color: '#F2EFFF' },
+    { data: [2, 5, 3, 4, 1, 6, 8, 7, 5, 3, 2, 4], stack: '1', label: 'Direct Sales', color: '#5932EA' },
+    { data: [8, 6, 7, 5, 3, 4, 9, 2, 10, 6, 8, 7], stack: '1', label: 'Retail', color: '#F2EFFF' },
+    { data: [8, 6, 7, 5, 3, 4, 9, 2, 10, 6, 8, 7], stack: '1', label: 'Retail', color: '#F2EFFF' },
   ],
   margin: { top: 20, right: 20, bottom: 20, left: 40 },
   height: 400,

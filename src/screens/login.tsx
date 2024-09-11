@@ -3,24 +3,63 @@ import { useNavigate } from 'react-router-dom';
 import imageAuth from "../assets/left-section.png";
 import emailIcon from "../assets/icon-mail.png";
 import { ArrowLeft2, ArrowRight2, User, Lock } from "iconsax-react";
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
+import { Menu, MenuButton, MenuItems } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { setAuth } from '../slices/authSlice';
 
 export default function Example() {
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const dispatch = useDispatch(); // Move this to the top level of the component
 
-  const handleSignIn = (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault();
-    if (email === 'admin@gmail.com') {
-      navigate('/adminDashboard');
-    } else if (email === 'scheduler@gmail.com'){
-        navigate('/scheduler');
-    }
-    else {
-      navigate('/dashboard');
+
+    try {
+      // Send POST request to authenticate
+      const response = await axios.post('https://80145f9a-f084-489a-af13-8039b533176b.mock.pstmn.io/auth/jc/login', {
+        email,
+        password,
+      });
+
+      if (response.status === 200) {
+        // Extract the accessToken and userId from the response
+        const { accessToken, userId } = response.data;
+
+
+        // if (response.status === 200) {
+          //       const { role } = response.data; // Assuming the role is returned from the API
+        
+          //       // Navigate based on role
+          //       if (role === 'admin') {
+          //         navigate('/adminDashboard');
+          //       } else if (role === 'scheduler') {
+          //         navigate('/scheduler');
+          //       } else {
+          //         navigate('/dashboard');
+          //       }
+          //     } else {
+          //       alert('Login failed. Please check your credentials.');
+          //     }
+
+
+        // Dispatch the token and userId to the Redux store
+        dispatch(setAuth({ token: accessToken, userId }));
+
+        console.log('Login successful and token stored in Redux!');
+
+        // Navigate to a new screen if needed
+        navigate('/adminDashboard'); // Or any other path
+      } else {
+        alert('Login failed. Please check your credentials.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
     }
   };
 
@@ -34,7 +73,7 @@ export default function Example() {
             <h1 className="ml-2 text-[#757575] zen-kaku-gothic-antique-regular">Return Home</h1>
           </div>
           <div>
-            <p className="text-[#424242] text-gray-500 zen-kaku-gothic-antique-regular">Already a member? <span className="text-[#212121] underline zen-kaku-gothic-antique-bold">LOG IN NOW</span></p>
+            <p className="text-[#424242] zen-kaku-gothic-antique-regular">Already a member? <span className="text-[#212121] underline zen-kaku-gothic-antique-bold">LOG IN NOW</span></p>
           </div>
         </div>
 
@@ -44,9 +83,6 @@ export default function Example() {
               Welcome to JCInspect
             </h2>
             <p className="mt-2 text-center text-xl zen-kaku-gothic-antique-regular leading-9 tracking-tight text-[#757575]">SIGN IN TO INSPECT</p>
-            {/* <Link to="/adminDashboard">
-              <a>admin login here</a>
-            </Link> */}
           </div>
 
           <div className="mt-10 mb-28 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -103,6 +139,8 @@ export default function Example() {
                       required
                       autoComplete="current-password"
                       className="block w-full py-5 zen-kaku-gothic-antique-regular pl-3 text-gray-900 placeholder:text-gray-400 border-0 sm:text-sm sm:leading-6"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                     <span className="px-3">
                       <p className="zen-kaku-gothic-antique-regular text-[#757575]">Show</p>
@@ -121,7 +159,7 @@ export default function Example() {
                 </button>
               </div>
             </form>
-           
+
           </div>
           <Footer />
         </div>

@@ -30,6 +30,7 @@ import Stats from '../../components/adminComponents/stats'
 import CardStats from '../../components/adminComponents/cardStats'
 import Analytics from '../../components/adminComponents/analytics'
 import Projects from '../../components/adminComponents/projects'
+import { useSelector } from 'react-redux';
 
 
 
@@ -65,7 +66,9 @@ function classNames(...classes: string[]) {
 }
 
 export default function Example() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const token = useSelector((state) => state.auth.token);
+  const userId = useSelector((state) => state.auth.userId);
 
   return (
     <>
@@ -212,24 +215,6 @@ export default function Example() {
       ))}
     </ul>
   </li>
-  <li>
-    {/* <div className="text-xs font-semibold leading-6 text-gray-400">Your teams</div> */}
-   
-
-  </li>
- 
-  {/* <li className="mt-auto">
-    <a
-      href="#"
-      className="group -mx-2 flex flex-col items-center gap-y-1 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
-    >
-      <Cog6ToothIcon
-        aria-hidden="true"
-        className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
-      />
-      <span>Settings</span>
-    </a>
-  </li> */}
 </ul>
 <button className="flex items-center py-2 mb-10 justify-center bg-white truncate rounded-lg border">
         Explore More
@@ -353,7 +338,7 @@ export default function Example() {
 
           <main className="py-10">
     <div className="px-4 sm:px-6 lg:px-8 flex justify-between">
-        <h1 className="text-3xl">admin Dashboard</h1>
+        <h1 className="text-3xl">Admin Dashboard</h1>
 
         <div className="text-center">
             <h3 className="items-center">Job search status</h3>

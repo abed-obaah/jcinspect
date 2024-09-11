@@ -1,22 +1,41 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+import axios from 'axios';
 
 export default function Example() {
+
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+
+  const userData = {
+    username: "roberto7X",
+    firstName: "Robert",
+    lastName: "Franklin",
+    email: "timsam@gmail.com",
+    phoneNumber: "09198374658",
+    password: "password123",
+    confirmPassword: "password123",
+    address: "Lagos Street Ikeja, Lagos",
+    roleId: 1,
+  };
+
+  try {
+    const response = await axios.post('https://80145f9a-f084-489a-af13-8039b533176b.mock.pstmn.io/api/jc/admin/users', userData, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    console.log('User successfully created:', response.data);
+    alert('User successfully created')
+    // Handle successful response
+  } catch (error) {
+    console.error('Error:', error.response ? error.response.data : error.message);
+    // Handle errors here
+  }
+};
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         
 
@@ -119,6 +138,9 @@ export default function Example() {
           </div>
         </div>
       </div>
+      <button type="submit"
+       className="w-32 rounded bg-[#0E1951] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-100 hover:text-black focus:outline-none"
+       >Submit</button>
     </form>
   )
 }
