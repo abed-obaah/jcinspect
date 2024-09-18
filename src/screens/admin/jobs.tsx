@@ -15,23 +15,15 @@ import {
 } from '@headlessui/react'
 import {
   Bars3Icon,
-  BellIcon,
   CalendarIcon,
   ChartPieIcon,
   Cog6ToothIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
-  HomeIcon,
-  UsersIcon,
   XMarkIcon,
-  BookmarkIcon
+ 
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, MagnifyingGlassIcon, Squares2X2Icon,BriefcaseIcon,ChatBubbleLeftIcon, ArrowLeftStartOnRectangleIcon, UserCircleIcon } from '@heroicons/react/20/solid'
+import {  MagnifyingGlassIcon, Squares2X2Icon,BriefcaseIcon, ArrowLeftStartOnRectangleIcon, UserCircleIcon } from '@heroicons/react/20/solid'
 import Logo from '../../assets/dashlogo.png';
-import Cards from '../components/Cards'
-import CompletedJobs from '../../components/CompletedJobs'
-import Aside from '../../components/Aside'
-import CampagnAside from '../../components/CampagnAside'
+
 import JobCard from '../../components/adminComponents/adminJobs'
 
 

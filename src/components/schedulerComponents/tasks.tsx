@@ -1,12 +1,6 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { EllipsisHorizontalIcon } from '@heroicons/react/20/solid';
 
-const statuses = {
-  Paid: 'text-green-700 bg-green-50 ring-green-600/20',
-  Withdraw: 'text-gray-600 bg-gray-50 ring-gray-500/10',
-  Overdue: 'text-red-700 bg-red-50 ring-red-600/10',
-};
-
 const clients = [
   {
     id: 1,
@@ -34,7 +28,7 @@ const backgroundColors = [
   'bg-[#0A5F59]', // Light purple background
 ];
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 

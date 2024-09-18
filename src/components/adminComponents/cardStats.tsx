@@ -83,16 +83,27 @@ export default function Example() {
         </Menu>
 
         <Stack direction="column" sx={{ width: '100%', maxWidth: 900 }}>
-          <BarChart {...barChartsParams} tooltip={{ trigger: 'axis' }} leftAxis={{
-                disableLine: true,
-                disableTicks: true,
-            }} 
-            grid={{ horizontal: true }}
-            bottomAxis={{
-                disableLine: true,
-                disableTicks: true,
-            }} 
-          />
+        <BarChart
+  {...barChartsParams}
+  tooltip={{ trigger: 'axis' }}
+  leftAxis={{
+    disableLine: true,
+    disableTicks: true,
+  }}
+  grid={{ horizontal: true }}
+  bottomAxis={{
+    disableLine: true,
+    disableTicks: true,
+  }}
+  xAxis={[
+    {
+      data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],  // Example data
+      scaleType: 'band',  // Ensure scaleType matches one of the allowed values
+    },
+  ]}
+  // Other props...
+/>
+
         </Stack>
       </div>
     </div>

@@ -10,7 +10,7 @@ const people = [
   
   export default function Example() {
 
-    const handleActionClick = (action) => {
+    const handleActionClick = (action: string) => {
         if (action === 'delete') {
           alert('Delete action clicked!');
           // Add your delete logic here

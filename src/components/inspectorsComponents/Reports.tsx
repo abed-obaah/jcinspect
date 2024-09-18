@@ -1,15 +1,3 @@
-import React from 'react';
-import {
-    Dialog,
-    DialogBackdrop,
-    DialogPanel,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuItems,
-    TransitionChild,
-    
-  } from '@headlessui/react'
 
   import { PlayIcon } from '@heroicons/react/20/solid'
 

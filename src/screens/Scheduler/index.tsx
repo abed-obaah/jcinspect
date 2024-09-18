@@ -22,7 +22,6 @@ import {
 import { ChevronDownIcon, MagnifyingGlassIcon, Squares2X2Icon,BriefcaseIcon,ChatBubbleLeftIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/react/20/solid'
 import Logo from '../../assets/dashlogo.png';
 import Cards from '../../components/schedulerComponents/tasks'
-import CompletedJobs from '../../components/CompletedJobs'
 import Aside from '../../components/Aside'
 import CampagnAside from '../../components/CampagnAside'
 import Engine from '../../components/schedulerComponents/card'

@@ -1,4 +1,3 @@
-import React from 'react';
 import aside from '../assets/Aside.png';
 
 // Sample data array

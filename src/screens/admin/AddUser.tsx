@@ -20,22 +20,16 @@ import {
   UserCircleIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, MagnifyingGlassIcon, Squares2X2Icon,BriefcaseIcon,ChatBubbleLeftIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon, MagnifyingGlassIcon, Squares2X2Icon,BriefcaseIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/react/20/solid'
 import Logo from '../../assets/dashlogo.png';
-import Cards from '../../components/Cards'
-import CompletedJobs from '../../components/CompletedJobs'
 import Aside from '../../components/Aside'
 import CampagnAside from '../../components/CampagnAside'
-import Stats from '../../components/adminComponents/stats'
-import CardStats from '../../components/adminComponents/cardStats'
-import Analytics from '../../components/adminComponents/analytics'
 import Types from '../../components/adminComponents/types'
 import Forms from '../../components/adminComponents/forms'
 
 import Modules from '../../components/adminComponents/modules'
 
 import {Message,Notification,Award, Clipboard, FolderCloud, Notepad} from 'iconsax-react'
-import { ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline'
 import { ChartPieIcon } from '@heroicons/react/24/solid'
 
 const navigation = [

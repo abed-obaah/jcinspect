@@ -1,19 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
-
 export default function Example() {
   return (
     <form>
@@ -28,7 +12,7 @@ export default function Example() {
               Safe Working Load
               </label>
               <div className="mt-2">
-                <input
+                 <input
                   id="first-name"
                   name="first-name"
                   type="text"

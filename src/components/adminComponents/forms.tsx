@@ -3,7 +3,7 @@ import axios from 'axios';
 export default function Example() {
 
 
-const handleSubmit = async (event) => {
+const handleSubmit = async (event: { preventDefault: () => void; }) => {
   event.preventDefault();
 
   const userData = {
@@ -29,7 +29,7 @@ const handleSubmit = async (event) => {
     alert('User successfully created')
     // Handle successful response
   } catch (error) {
-    console.error('Error:', error.response ? error.response.data : error.message);
+    // console.log('Error:', error.response);
     // Handle errors here
   }
 };

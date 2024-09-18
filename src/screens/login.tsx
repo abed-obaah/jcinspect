@@ -16,7 +16,7 @@ export default function Example() {
   const navigate = useNavigate();
   const dispatch = useDispatch(); // Move this to the top level of the component
 
-  const handleSignIn = async (e) => {
+  const handleSignIn = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
     try {

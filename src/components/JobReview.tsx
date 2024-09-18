@@ -20,7 +20,7 @@ import {
   UserCircleIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, MagnifyingGlassIcon, Squares2X2Icon,BriefcaseIcon,ChatBubbleLeftIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon, MagnifyingGlassIcon, Squares2X2Icon,BriefcaseIcon, ArrowLeftStartOnRectangleIcon } from '@heroicons/react/20/solid'
 import Logo from '../assets/dashlogo.png';
 
 import Aside from '../components/Aside'

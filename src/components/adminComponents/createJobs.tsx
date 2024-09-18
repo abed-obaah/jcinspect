@@ -1,21 +1,9 @@
-
-
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { 
-    ClipboardIcon,
-    ChatBubbleBottomCenterIcon,
-    ChartBarSquareIcon, 
-    InboxArrowDownIcon, 
-    MagnifyingGlassCircleIcon 
-} from '@heroicons/react/20/solid';
 import SelectJobs from '../adminComponents/SelectJobSite'
 import SelectInspector from '../adminComponents/SelectClient'
 import MobilizeDetails from '../adminComponents/MobilizeDetailsScope'
 
 
 export default function Example() {
-  const navigate = useNavigate();
 
   return (
     <div className="overflow-hidden rounded-lg bg-white shadow">
