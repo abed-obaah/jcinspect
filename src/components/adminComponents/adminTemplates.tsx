@@ -7,11 +7,11 @@ import { People,UserRemove,Trash,FavoriteChart} from 'iconsax-react';
 
 const people = [
   { name: 'Check List', button: "Create", icon: ClipboardIcon, route: "/viewChecklist" },
-  { name: 'report Template', button: "Assign", icon: People, route: "/assign-jobs" },
-  { name: 'View User permissions', button: "Track", icon: ChartBarSquareIcon, route: "/track-jobs" },
-  { name: 'Suspend User', button: "Set", icon: UserRemove, route: "/priortize-jobs" },
-  { name: 'Delete User Account', button: "Inspect", icon: Trash, route: "/inspect-jobs" },
-  { name: 'User Activities', button: "Inspect", icon: FavoriteChart, route: "/inspect-jobs" },
+  { name: 'report Template', button: "Add", icon: People, route: "#" },
+  { name: 'View User permissions', button: "View", icon: ChartBarSquareIcon, route: "#" },
+  { name: 'Suspend User', button: "Suspend", icon: UserRemove, route: "/priortize-jobs" },
+  { name: 'Delete User Account', button: "Delete", icon: Trash, route: "/inspect-jobs" },
+  { name: 'User Activities', button: "View", icon: FavoriteChart, route: "/inspect-jobs" },
 //   { name: 'User Activities', button: "View", icon: MagnifyingGlassCircleIcon, route: "/user-activities" },
 ];
 

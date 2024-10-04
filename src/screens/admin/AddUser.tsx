@@ -208,23 +208,10 @@ export default function Example() {
     </ul>
   </li>
   <li>
-    {/* <div className="text-xs font-semibold leading-6 text-gray-400">Your teams</div> */}
+ 
    
 
   </li>
- 
-  {/* <li className="mt-auto">
-    <a
-      href="#"
-      className="group -mx-2 flex flex-col items-center gap-y-1 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
-    >
-      <Cog6ToothIcon
-        aria-hidden="true"
-        className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
-      />
-      <span>Settings</span>
-    </a>
-  </li> */}
 </ul>
 <button className="flex items-center py-2 mb-10 justify-center bg-white truncate rounded-lg border">
         Explore More

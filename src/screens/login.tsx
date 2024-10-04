@@ -13,44 +13,28 @@ import { setAuth } from '../slices/authSlice';
 export default function Example() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false); // state for toggling password visibility
   const navigate = useNavigate();
-  const dispatch = useDispatch(); // Move this to the top level of the component
+  const dispatch = useDispatch();
 
   const handleSignIn = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
     try {
       // Send POST request to authenticate
-      const response = await axios.post('https://80145f9a-f084-489a-af13-8039b533176b.mock.pstmn.io/auth/jc/login', {
+      const response = await axios.post('http://jcinspect.eu-north-1.elasticbeanstalk.com/auth/jc/login', {
         email,
         password,
       });
 
       if (response.status === 200) {
-        // Extract the accessToken and userId from the response
         const { accessToken, userId } = response.data;
-
-
-        // if (response.status === 200) {
-          //       const { role } = response.data; // Assuming the role is returned from the API
-        
-          //       // Navigate based on role
-          //       if (role === 'admin') {
-          //         navigate('/adminDashboard');
-          //       } else if (role === 'scheduler') {
-          //         navigate('/scheduler');
-          //       } else {
-          //         navigate('/dashboard');
-          //       }
-          //     } else {
-          //       alert('Login failed. Please check your credentials.');
-          //     }
-
 
         // Dispatch the token and userId to the Redux store
         dispatch(setAuth({ token: accessToken, userId }));
 
         console.log('Login successful and token stored in Redux!');
+        console.log('response:',response.data)
 
         // Navigate to a new screen if needed
         navigate('/adminDashboard'); // Or any other path
@@ -58,7 +42,7 @@ export default function Example() {
         alert('Login failed. Please check your credentials.');
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error:', error.response);
       alert('An error occurred. Please try again.');
     }
   };
@@ -134,7 +118,7 @@ export default function Example() {
                     <input
                       id="password"
                       name="password"
-                      type="password"
+                      type={showPassword ? 'text' : 'password'}
                       placeholder="********"
                       required
                       autoComplete="current-password"
@@ -142,8 +126,13 @@ export default function Example() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                     />
-                    <span className="px-3">
-                      <p className="zen-kaku-gothic-antique-regular text-[#757575]">Show</p>
+                    <span
+                      className="px-3 cursor-pointer"
+                      onClick={() => setShowPassword(!showPassword)} // toggle show password
+                    >
+                      <p className="zen-kaku-gothic-antique-regular text-[#757575]">
+                        {showPassword ? 'Hide' : 'Show'}
+                      </p>
                     </span>
                   </div>
                 </div>
